@@ -1,0 +1,42 @@
+# ==========================
+# 🌿 FLORA CARBON GPT - .gitignore
+# ==========================
+
+# === Python & FastAPI ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+.env
+venv/
+*.venv/
+.envrc/
+.pytest_cache/
+.mypy_cache/
+
+# === Backend Data & Embeddings ===
+backend/app/data/
+backend/app/embeddings_*/
+
+# === Node / React ===
+node_modules/
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# === Streamlit / Cache ===
+.streamlit/
+
+# === System Files ===
+.DS_Store
+Thumbs.db
+
+# === IDE / Editor Files ===
+.vscode/
+.idea/
+
+# === Backup / Misc ===
+*.bak
+*.tmp

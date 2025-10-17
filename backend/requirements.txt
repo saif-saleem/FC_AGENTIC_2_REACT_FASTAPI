@@ -1,0 +1,44 @@
+# Core
+python-dotenv
+tqdm
+pandas
+
+# LangChain ecosystem
+langchain
+langchain-community
+langchain-core
+langchain-chroma
+langchain-openai
+langchain-experimental
+
+# Vector DB
+chromadb
+
+# OpenAI + Tokenization
+openai
+tiktoken
+
+# PDF / DOCX loaders
+pypdf
+docx2txt
+
+# Excel / Tabular loaders
+xlrd
+openpyxl
+pyxlsb
+
+# KML/KMZ
+fastkml
+simplekml
+shapely
+
+# Web/Utils
+requests
+streamlit
+
+
+fastapi
+uvicorn
+
+
+

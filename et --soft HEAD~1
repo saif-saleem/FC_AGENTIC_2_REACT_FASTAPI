@@ -1,0 +1,8 @@
+[33mcommit 853e5e25310b129938e327cc494d5de69480a63a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: saif-saleem <133539527+saif-saleem@users.noreply.github.com>
+Date:   Sat Oct 18 02:16:23 2025 +0530
+
+    fixed api
+
+ backend/app/embeddings.zip | Bin [31m1996774229[m -> [32m0[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
