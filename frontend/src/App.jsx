@@ -9,7 +9,7 @@ function App() {
   const [input, setInput] = useState("");
   const [standard, setStandard] = useState("gs");
   const [showWelcome, setShowWelcome] = useState(true);
-    const [isLoading, setIsLoading] = useState(false); // ✅ new state
+  const [isLoading, setIsLoading] = useState(false);
 
   // === Send Message ===
   const sendMessage = async () => {
@@ -18,10 +18,11 @@ function App() {
 
     const userMsg = { sender: "user", text: input };
     setMessages((prev) => [...prev, userMsg]);
-    setIsLoading(true); // ✅ start loading
+    setIsLoading(true);
 
     try {
-      const res = await axios.post("/api/chat", {
+      // ✅ Changed URL to match Nginx config
+      const res = await axios.post("/chat", {
         message: input,
         selected_standard: standard,
       });
@@ -38,11 +39,10 @@ function App() {
         { sender: "bot", text: "⚠️ Error fetching response." },
       ]);
     }
-    setIsLoading(false); // ✅ stop loading
+    setIsLoading(false);
     setInput("");
   };
 
-  // === 🆕 New Chat ===
   const handleNewChat = () => {
     setMessages([]);
     setInput("");
@@ -54,7 +54,7 @@ function App() {
       {/* === Logo Header === */}
       <div className="logo-header">
         <img
-          src="/assets/flora_carbon_logo.png"
+          src="/backend-assets/flora_carbon_logo.png" // ✅ Correct path for production
           alt="Flora Carbon GPT"
           className="app-logo top-right-logo"
         />
@@ -74,16 +74,15 @@ function App() {
           <ChatWindow messages={messages} />
         )}
 
-
-    {/* 🌟 Dynamic Loading Message */}
-    {isLoading && (
-        <div className="loading-message">
+        {/* 🌟 Dynamic Loading Message */}
+        {isLoading && (
+          <div className="loading-message">
             <span className="dot"></span>
             <span className="dot"></span>
             <span className="dot"></span>
             <span className="loading-text">Generating accurate answer...</span>
-        </div>
-    )}
+          </div>
+        )}
       </div>
 
       {/* === Input Area === */}
