@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FiSend, FiRefreshCw } from "react-icons/fi";
 import ChatWindow from "./components/ChatWindow";
@@ -64,7 +64,9 @@ function App() {
       <div className="chat-area">
         {showWelcome && messages.length === 0 ? (
           <div className="welcome-message">
-            <h2 className="welcome-title">Hello! 👋</h2>
+            <h2 className="welcome-title"> 
+            Hello! {localStorage.getItem("userName") } 👋
+            </h2>
             <p className="welcome-subtext">
               I’m <strong>Flora GPT</strong> — your assistant for exploring
               carbon standards, projects, and sustainability insights.
