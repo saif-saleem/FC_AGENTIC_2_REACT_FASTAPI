@@ -8,16 +8,28 @@ body {
   padding: 0;
 }
 
-.container {
+/* .container {
   max-width: 750px;
   margin-left: 385.400px;
   margin-right: 385.400px;
-  /* margin-bottom: 60px; */
+  margin-bottom: 60px;
   margin-top: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
+} */
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* === Logo Section === */
 /* === Logo Section (Top-Left Aligned) === */
@@ -214,6 +226,7 @@ body {
 
 /* === Input Container === */
 .input-container {
+  /* height: 50px; */
   display: flex;
   align-items: center;
   background: #ffffff;
@@ -221,7 +234,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 10px 15px;
   width: 100%;
-  max-width: 700px;
+  max-width: 90%;
   gap: 10px;
   position: relative;
   margin-top: 20px;
@@ -370,7 +383,7 @@ select::-webkit-scrollbar-thumb:hover {
 }
 
 
-.chat-area {
+/* .chat-area {
   width: 100%;
   max-width: 700px;
   background: #ffffff;
@@ -382,6 +395,20 @@ select::-webkit-scrollbar-thumb:hover {
   align-items: center;
   margin-bottom: 20px;
   overflow-y: auto;
+} */
+
+.chat-area {
+  width: 90vw; /* Covers most of the screen width */
+  height: 80vh; /* Expands vertically */
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  position: relative;
 }
 
 .welcome-message {
@@ -409,7 +436,7 @@ select::-webkit-scrollbar-thumb:hover {
 
 .chat-area {
   width: 100%;
-  max-width: 700px;
+  max-width: 100%;
   background: #ffffff;
   border-radius: 18px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);

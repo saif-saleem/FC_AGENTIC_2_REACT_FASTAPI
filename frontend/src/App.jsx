@@ -289,8 +289,13 @@ function App() {
       <div className="chat-area">
         {showWelcome && messages.length === 0 ? (
           <div className="welcome-message">
+<<<<<<< HEAD
             <h2 className="welcome-title">
               {userName ? `Hello, ${userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase()}! 👋` : "Hello! 👋"}
+=======
+            <h2 className="welcome-title"> 
+            Hello! {localStorage.getItem("userName") } 👋
+>>>>>>> 4c93bc78e0bea90d7e312865c0cc202022522a5c
             </h2>
             <p className="welcome-subtext">
               I'm <strong>Flora GPT</strong> — your assistant for exploring
