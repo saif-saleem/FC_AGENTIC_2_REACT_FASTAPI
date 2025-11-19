@@ -582,7 +582,7 @@ select::-webkit-scrollbar-thumb:hover {
 .input-container {
   position: fixed;
   left: 50%;
-  bottom: 30px;
+  bottom: 10px;
   transform: translateX(-50%);
   width: calc(100% - 80px);
   max-width: 900px;
