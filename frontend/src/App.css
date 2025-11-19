@@ -448,6 +448,12 @@ select::-webkit-scrollbar-thumb:hover {
   overflow-y: auto;
   position: relative;
 }
+/* Hide white background when welcome screen is active */
+.chat-area.no-bg {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
 
 .welcome-message {
   text-align: center;
@@ -564,3 +570,48 @@ select::-webkit-scrollbar-thumb:hover {
 }
 
 /* Ensure chat area allows absolute centering */
+/* === Center input when welcome is showing, move down after first message === */
+
+/* Ensure container is a positioning context */
+.container {
+  position: relative; /* already set in your CSS but reinforce for safety */
+}
+
+/* Default input-container at bottom (when chat active) */
+/* Fallback for browsers without :has() — uses class set from React */
+.input-container {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 900px;
+  z-index: 900;
+  transition: all 320ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* When React sets .welcome-active on the container, center input under welcome */
+.container.welcome-active .input-container {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -20%);
+  bottom: auto;
+  width: 70%;
+  max-width: 760px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transition: all 320ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* Small screens: adjust spacing */
+@media (max-width: 640px) {
+  .container.welcome-active .input-container {
+    top: 62%;
+    width: 92%;
+    transform: translate(-50%, -30%);
+  }
+  .input-container {
+    width: calc(100% - 40px);
+    max-width: 640px;
+  }
+}

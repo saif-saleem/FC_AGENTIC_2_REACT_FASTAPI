@@ -212,7 +212,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className={`container ${showWelcome && messages.length === 0 ? 'welcome-active' : ''}`}>
       {/* === Logo Header (Left) === */}
       <div className="logo-header">
         <img
@@ -293,7 +293,7 @@ function App() {
       </div>
 
       {/* === Chat Area === */}
-      <div className="chat-area">
+      <div className={`chat-area ${showWelcome && messages.length === 0 ? 'no-bg' : ''}`}>
         {showWelcome && messages.length === 0 ? (
           <div className="welcome-message">
             <h2 className="welcome-title">
