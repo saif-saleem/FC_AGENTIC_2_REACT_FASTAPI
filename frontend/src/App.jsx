@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FiSend, FiRefreshCw } from "react-icons/fi";
 import ChatWindow from "./components/ChatWindow";
+import TrialActivationPopup from "./components/TrialActivationPopup";
 import "./App.css";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
@@ -219,6 +220,12 @@ function App() {
           alt="Flora Carbon GPT"
           className="app-logo"
         />
+        <TrialActivationPopup
+        isOpen={!!(trialStatus?.isTrialActive && trialStatus?.daysRemaining > 0)}
+        onClose={() => {}}
+        daysRemaining={trialStatus?.daysRemaining ?? 0}
+        />
+
       </div>
 
       {/* === User Info Header (Right) === */}

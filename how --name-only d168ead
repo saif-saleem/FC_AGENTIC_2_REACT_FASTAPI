@@ -1,0 +1,10 @@
+*   [33md168ead[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #2 from shekokarmahesh/main
+[31m|[m[32m\[m  
+[31m|[m * [33mda93d40[m removed some conflicting errors :
+* [32m|[m [33mda62052[m Merge pull request #1 from shekokarmahesh/main
+[33m|[m[32m\[m[32m|[m 
+[33m|[m *   [33m47ce28d[m Refactor CSS for responsive design and update welcome message logic
+[33m|[m [35m|[m[33m\[m  
+[33m|[m [35m|[m[33m/[m  
+[33m|[m[33m/[m[35m|[m   
+* [35m|[m [33m4c93bc7[m changed chat window size
