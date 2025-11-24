@@ -222,7 +222,7 @@ function App() {
         />
         <TrialActivationPopup
         isOpen={!!(trialStatus?.isTrialActive && trialStatus?.daysRemaining > 0)}
-        onClose={() => {}}
+        onClose={() => setTrialStatus(prev => ({ ...(prev || {}), isTrialActive: false }))}
         daysRemaining={trialStatus?.daysRemaining ?? 0}
         />
 
