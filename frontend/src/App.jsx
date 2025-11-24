@@ -5,7 +5,7 @@ import ChatWindow from "./components/ChatWindow";
 import TrialActivationPopup from "./components/TrialActivationPopup";
 import "./App.css";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://backend.floracarbon.ai';
 
 function App() {
   const [messages, setMessages] = useState([]);
